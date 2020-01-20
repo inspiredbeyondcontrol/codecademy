@@ -1,0 +1,69 @@
+const team = {
+  _players: [
+    {
+      firstName: 'Big Daddy',
+      lastName: 'Money',
+      age: 21
+    },
+    {
+      firstName: 'Khia',
+      lastName: 'Lopez',
+      age: 18
+    },
+    {
+      firstName: 'Sasha',
+      lastName: 'Banks',
+      age: 21
+    }
+  ],
+  _games: [
+    {
+      opponent: 'Douchebags',
+      teamPoints: 37,
+      opponentPoints: 13
+    },
+    {
+      opponent: 'Losers',
+      teamPoints: 57,
+      opponentPoints: 3
+    },
+    {
+      opponent: 'Ashtrays',
+      teamPoints: 27,
+      opponentPoints: 10
+    }
+  ],
+  get players(){
+    return this._players;
+  },
+  get games(){
+    return this._games;
+  },
+  addPlayer(firstName, lastName, age){
+    let player = {
+      firstName: firstName,
+      lastName: lastName,
+      age: age
+    };
+    this._players.push(player);
+  },
+  addGame(opponent, teamPoints, opponentPoints) {
+    let game = {
+      opponent: opponent,
+      teamPoints: teamPoints,
+      opponentPoints: opponentPoints
+    };
+    this._games.push(game);
+  }
+  
+};
+
+team.addPlayer('Dean', 'Winchester', 28);
+team.addPlayer('Sam', 'Winchester', 26);
+team.addPlayer('Castle', 'Angel of the Lord', 4856);
+console.log(team._players);
+
+team.addGame('Suckers', 48, 12);
+team.addGame('Assbutts', 32, 21);
+team.addGame('Dickbags', 52, 27);
+console.log(team._games);
