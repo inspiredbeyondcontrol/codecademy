@@ -1,0 +1,8 @@
+// basic examples of js class syntax
+
+class Surgeon {
+  constructor(name, department) {
+    this.name = name;
+    this.department = department;
+  }
+}
