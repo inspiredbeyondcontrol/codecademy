@@ -1,0 +1,24 @@
+// Syntax of Native Promise vs Async
+
+
+// Native Promise:
+
+function nativePromiseVersion() {
+    returnsFirstPromise()
+    .then((firstValue) => {
+        console.log(firstValue);
+        return returnsSecondPromise(firstValue);
+    })
+   .then((secondValue) => {
+        console.log(secondValue);
+    });
+}
+
+// Async:
+
+async function asyncAwaitVersion() {
+ let firstValue = await returnsFirstPromise();
+ console.log(firstValue);
+ let secondValue = await returnsSecondPromise(firstValue);
+ console.log(secondValue);
+}
